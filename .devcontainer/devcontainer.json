@@ -1,0 +1,32 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/ubuntu
+{
+	"name": "NodeContainer",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": { 
+			// Update 'VARIANT' to pick a Python version: 3, 3.9, 3.8, 3.7, 3.6.
+			// Append -bullseye or -buster to pin to an OS version.
+			// Use -bullseye variants on local on arm64/Apple Silicon.
+			"VARIANT": "3.9-bullseye",
+			// Options
+			"NODE_VERSION": "lts/*"
+		}
+	},
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	
+	"features": {
+		"github-cli": "latest",
+		//"aws-cli": "latest",
+		//"aws_cdk": "latest"
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	 "forwardPorts": [8081],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash ./.devcontainer/post-create.sh"
+
+}
