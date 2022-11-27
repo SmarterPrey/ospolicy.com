@@ -1,8 +1,9 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=568248659)
 
-https://github.com/ppottorff/ospolicy.com/actions/workflows/deploycdk.yml/badge.svg
+![AWS Deploy](https://github.com/ppottorff/ospolicy.com/actions/workflows/deploycdk.yml/badge.svg)
 
-### OSPpolicy.com
+
+### OS Policy Website
 
 This project contains a web application built in CDK, Dev in Containers, Pipelines in GHA, REACT...  
 
