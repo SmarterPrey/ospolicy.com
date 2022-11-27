@@ -62,7 +62,7 @@ export class OspolicyComStack extends cdk.Stack {
       securityHeadersBehavior: {
         contentSecurityPolicy: {
           override: true,
-          contentSecurityPolicy: "default-src 'self'"
+          contentSecurityPolicy: "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; form-action 'none'; base-uri 'self';",
         },
         strictTransportSecurity: {
           override: true,
