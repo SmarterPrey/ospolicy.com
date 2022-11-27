@@ -10,7 +10,7 @@ import * as acm from 'aws-cdk-lib/aws-certificatemanager';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 import * as route53Targets from 'aws-cdk-lib/aws-route53-targets';
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
-import * as widget_service from "./widget_service";
+//import * as widget_service from "./widget_service";
 
 
 export class OspolicyComStack extends cdk.Stack {
@@ -132,6 +132,6 @@ export class OspolicyComStack extends cdk.Stack {
     });
 
     // create widget service
-    new widget_service.WidgetService(this, 'WidgetService');
+    //new widget_service.WidgetService(this, 'WidgetService');
   }
 }
