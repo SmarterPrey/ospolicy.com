@@ -27,6 +27,14 @@ export class OspolicyComStack extends cdk.Stack {
     // create zone record
     const zone = route53.HostedZone.fromLookup(this, 'HostedZone', { domainName: domainName });
 
+    //create cookie properties
+    const cookieProps = {
+      cookieName: 'ospolicy.com',
+      ttl: Duration.days(0),
+      secure: true,
+      httpOnly: true,
+      sameSite: 'None',
+    };
     // create certificate
     const certificate = new acm.DnsValidatedCertificate(this, 'ospolicySiteCertificate',
       {
@@ -62,7 +70,7 @@ export class OspolicyComStack extends cdk.Stack {
       securityHeadersBehavior: {
         contentSecurityPolicy: {
           override: true,
-          contentSecurityPolicy: "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; form-action 'none'; base-uri 'self';",
+          contentSecurityPolicy: "default-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; form-action 'none'; base-uri 'self'; 'unsafe-inline' https:; manifest-src 'self'",
         },
         strictTransportSecurity: {
           override: true,
@@ -124,7 +132,6 @@ export class OspolicyComStack extends cdk.Stack {
         },
       ],
     });
-
 
     new s3deploy.BucketDeployment(this, 'DeployWebsite', {
       sources: [s3deploy.Source.asset('./site-contents')],
