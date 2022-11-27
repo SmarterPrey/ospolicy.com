@@ -1,4 +1,5 @@
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=568248659&machine=basicLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=EastUs)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=568248659)
+
 https://github.com/ppottorff/ospolicy.com/actions/workflows/deploycdk.yml/badge.svg
 
 ### OSPpolicy.com
