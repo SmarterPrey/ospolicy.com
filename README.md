@@ -1,10 +1,19 @@
-# Welcome to your CDK TypeScript project
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=568248659&machine=basicLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=EastUs)
+https://github.com/ppottorff/ospolicy.com/actions/workflows/deploycdk.yml/badge.svg
 
-This is a blank project for CDK development with TypeScript.
+### OSPpolicy.com
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+This project contains a web application built in CDK, Dev in Containers, Pipelines in GHA, REACT...  
 
-## Useful commands
+### Things I want to do:
+1. Add React App for creating documentation plans, using them for a compliance project.
+1. Implement the comments code so any page on the site has ability to take comments.
+1. Add a WAF, make the out of the box "sec" ideal.
+1. Add signed Cookies, httponly and secure.
+1. Add Cognito based auth against pools of AAD, Cognito, Anonmyous, possibly GitHub.
+
+
+### Useful CDK Build Commands
 
 * `npm run build`   compile typescript to js
 * `npm run watch`   watch for changes and compile
