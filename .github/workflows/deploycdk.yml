@@ -19,7 +19,7 @@ jobs:
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1-node16
         with:   
-          role-to-assume: arn:aws:iam::680827290631:role/GitHub.com_OIDC_Role
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT }}:role/GitHub.com_OIDC_Role
           role-session-name: ospolicyghasession
           aws-region: ${{ env.AWS_REGION }}
       - name: cdk diff
