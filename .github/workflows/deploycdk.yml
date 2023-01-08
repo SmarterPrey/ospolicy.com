@@ -17,10 +17,10 @@ jobs:
       - name: Clone the repo
         uses: actions/checkout@v3
       - name: Configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v1-node16
         with:   
-          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT }}:role/GitHub.com_OIDC_Role
-          role-session-name: MySessionName
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT }}:role/githuboidcrole
+          role-session-name: GitHubOIDCSession
           aws-region: ${{ env.AWS_REGION }}
       - name: cdk diff
         uses: youyo/aws-cdk-github-actions@v2
