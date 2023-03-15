@@ -5,7 +5,7 @@
 
 ### OS Policy Website
 
-This project contains a web application built in CDK, Dev in Containers, Pipelines in GHA, REACT...  
+This project contains a web application built in CDK, Dev in Containers, Pipelines in GHA, REACT... for testing
 
 ### Things I want to do next:
 1. Add React App for creating documentation plans, using them for a compliance project.
