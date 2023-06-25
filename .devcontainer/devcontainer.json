@@ -19,7 +19,7 @@
 	"remoteUser": "vscode",
 	
 	"features": {
-		"github-cli": "latest",
+		"github-cli": "latest"
 		//"aws-cli": "latest",
 		//"aws_cdk": "latest"
 	},
