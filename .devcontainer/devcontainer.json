@@ -33,7 +33,8 @@
 			"extensions": [
 				"jitsecurity.jitsecurity",
 				"ms-azuretools.vscode-docker",
-				"vsls-contrib.codetour"
+				"vsls-contrib.codetour",
+				"GitHub.copilot"
 			]
 		}
 	}
