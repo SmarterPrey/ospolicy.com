@@ -8,7 +8,6 @@
     "GitHub.copilot",
     "ms-vscode-remote.remote-containers",
     "github.codespaces",
-    "ms-vscode-remote.vscode-remote-extensionpack",
-    "bridgecrew.checkov",
+    "ms-vscode-remote.vscode-remote-extensionpack"
   ]
 }
