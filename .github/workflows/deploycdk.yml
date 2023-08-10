@@ -4,9 +4,6 @@
 name: Deploy CDK Project
 on:
   push
-env: 
-  AWS_REGION : 'us-east-1'
-  AWS_ACCOUNT : '567582356254'
 permissions: 
     id-token: write
     contents: read #Required for checkout
@@ -19,16 +16,16 @@ jobs:
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:   
-          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT }}:role/githuboidcrole
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT }}:role/githuboidcrole
           role-session-name: GitHubOIDCSession
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: ${{ secrets.AWS_REGION }}
       - name: cdk diff
         uses: youyo/aws-cdk-github-actions@v2
         with: 
           cdk_subcommand: 'diff'
           actions_comment: true
         env:
-          AWS_DEFAULT_REGION: '${{ env.AWS_REGION }}'
+          AWS_DEFAULT_REGION: '${{ secrets.AWS_REGION }}'
 
       - name: cdk synth
         uses: youyo/aws-cdk-github-actions@v2
@@ -36,7 +33,7 @@ jobs:
           cdk_subcommand: 'synth'
           cdk_args: '-c domain=aws.efrap.com -c subdomain=www'
         env:
-          AWS_DEFAULT_REGION: '${{ env.AWS_REGION }}'
+          AWS_DEFAULT_REGION: '${{ secrets.AWS_REGION }}'
 
       - name: cdk deploy
         uses: youyo/aws-cdk-github-actions@v2
@@ -45,4 +42,4 @@ jobs:
           cdk_args: '--require-approval never'
           actions_comment: true
         env:
-          AWS_DEFAULT_REGION: '${{ env.AWS_REGION }}'
+          AWS_DEFAULT_REGION: '${{ secrets.AWS_REGION }}'
