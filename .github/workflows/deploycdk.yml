@@ -3,7 +3,9 @@
 # If you delete and rebootstrap, make sure you delete the cdk S3 assets bucket first.
 name: Deploy CDK Project
 on:
-  push
+  pull_request:
+    branches:
+      - main
 permissions: 
     id-token: write
     contents: read #Required for checkout

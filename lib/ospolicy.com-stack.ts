@@ -169,4 +169,13 @@ export class OspolicyComStack extends cdk.Stack {
     //   publicLoadBalancer: true // Default is true
     // });
   }
+  //create a public unencrypted s3 bucket
+  readonly slopBucket = new s3.Bucket(this, 'MySloppyBucket', {
+    versioned: false,
+    encryption: s3.BucketEncryption.UNENCRYPTED,
+    blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+    RemovalPolicy: RemovalPolicy.DESTROY,
+    autoDeleteObjects: true,
+    publicReadAccess: true
+  });
 }
