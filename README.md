@@ -1,5 +1,7 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=568248659)
 
+[![CodeGuru Security Assessment](https://github.com/SmarterPrey/ospolicy.com/actions/workflows/main.yml/badge.svg)](https://github.com/SmarterPrey/ospolicy.com/actions/workflows/main.yml)
+
 ![AWS Deploy](https://github.com/ppottorff/ospolicy.com/actions/workflows/deploycdk.yml/badge.svg)
 
 
